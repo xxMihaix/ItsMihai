@@ -6,11 +6,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ItsMihai</title>
     <link rel="stylesheet" href="/style/index.css">
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
+    <script type="module" src="/scripts/index.js" defer></script>
 </head>
 
 <body>
+
+    <div class="navbar">
+        <div class="float-left">
+            <p class="logo-name">ItsMihai</p>
+        </div>
+        <div class="float-right">
+            <div class="nav-button A">About Me</div>
+            <div class="nav-button B">Videos</div>
+            <div class="nav-button C">Socials</div>
+            <div class="nav-button D">Merch</div>
+            <div class="nav-button E">Community</div>
+            <div class="nav-button F">Fan Art</div>
+            <div class="nav-button G">Contact</div>
+            <div class="menu-btn">
+                <img src="/images/menu.svg">
+            </div>
+        </div>
+    </div>
+
+    <div class="menu-container">
+        <div class="menu-button a">About Me</div>
+        <div class="menu-button b ">Videos</div>
+        <div class="menu-button c">Socials</div>
+        <div class="nav-button d">Merch</div>
+        <div class="menu-button e">Community</div>
+        <div class="menu-button f">Fan Art</div>
+        <div class="menu-button g">Contact</div>
+    </div>
+
+    <div class="header-all">
+        <div class="obj-container">
+            <model-viewer class="itsavatar" src="/obj/itsav.glb" 
+            camera-controls 
+            camera-orbit="-160deg" 
+            auto-rotate
+            disable-zoom
+            disable-pan>
+        </model-viewer>
+        </div>
+
+        <div class="header-end">
+            <img src="/images/bottomHeader.png">
+            <div class="container-in">
+                <p>What's up?</p>
+            <p>Welcome to our wonderful Community!</p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    
     <div class="container-soon-all">
         <div class="container-soon">
+            <model-viewer class="itsavatar" src="/obj/itsav.glb" camera-controls auto-rotate></model-viewer>
             <div class="img-cont-soon">
                 <img src="/images/ProfilePic.jpg">
             </div>
@@ -20,6 +80,8 @@
             <a href="https://www.youtube.com/@ItsMihaii" class="link">🡥 View on YouTube </a>
         </div>
     </div>
+    
+
 </body>
 
 </html>
