@@ -201,7 +201,7 @@ p{
 
 .header-all{
     width: 100%;
-    height: 100vh;
+    height: 99vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -216,6 +216,7 @@ p{
     height: 90%;
     width: 100%;
     outline: none;
+    z-index: 5
 }
 
 .itsavatar{
@@ -224,12 +225,89 @@ p{
     outline: none;
 }
 
+/************* Background ItsMihai **************/
+
+.carousel{
+    width: 100%;
+    height: 20vh;
+    max-height: 500px;
+    overflow-x: auto;
+    display: flex;
+    gap: 25px;
+}
+
+.carousel::-webkit-scrollbar{
+    display: none;
+}
+
+.carousel1{
+    position: absolute;
+    top: 65%;
+    transform: translateY(-35%);
+    z-index: 3;
+}
+
+.carousel2{
+    position: absolute;
+    top: 35%;
+    transform: translateY(-65%);
+    z-index: 3;
+}
+
+
+.group{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+.group1{
+    animation: spin1 35s infinite linear;
+}
+
+.group2{
+    animation: spin2 35s infinite linear;
+}
+
+.card{
+    font-weight: bold;
+    font-size: 60px;
+}
+
+@media(max-width: 1500px){
+    .card{
+        font-size: 50px;
+    }
+}
+
+@media(max-width: 1000px){
+    .card{
+        font-size: 40px;
+    }
+}
+
+@keyframes spin1 {
+    from {translate: 0%;}
+    to {translate: -100%;}
+}
+
+
+@keyframes spin2 {
+    from {translate: -100%;}
+    to {translate: 0%;}
+}
+
+
+/************* Header end Container **************/
 
 .header-end-container{
     position: absolute;
     bottom: 0px;
     width: 100%;
     height: 30vh;
+    z-index: 7;
 }
 
 .shape{
@@ -257,24 +335,25 @@ p{
 }
 
 .roles{
-    animation: role-change 5s infinite;
+    animation: none;
+}
+
+.roles.animation1{
+    animation: role-change1 5s infinite;
+}
+
+.roles.animation2{
+    animation: role-change2 5s infinite;
 }
 
 .role{
+    color: #ff2a85;
     display: flex;
     flex-direction: column;
-    color: rgb(244, 0, 0);
     height: 100%;
-    text-shadow:
-    2px 0 0 rgba(0, 0, 0, 0.8),
-   -2px 0 0 rgba(0,0,0,0.8),
-    0 2px 0 rgba(0,0,0,0.8),
-    0 -2px 0 rgba(0,0,0,0.8),
-    2px 2px 0 rgba(0,0,0,0.8),
-   -2px 2px 0 rgba(0,0,0,0.8),
-    2px -2px 0 rgba(0,0,0,0.8),
-   -2px -2px 0 rgba(0,0,0,0.8);
-
+    text-shadow: 
+    0 0 10px rgba(255, 42, 133, 0.5),
+    0 0 20px rgba(255, 42, 133, 0.2);
 }
 
 .tit1, .tit2, .roles-container{
@@ -282,7 +361,7 @@ p{
     transform: translateY(20px);
 }
 
-@keyframes role-change {
+@keyframes role-change1 {
     0%, 10% {
         transform: translateY(0%);
     }
@@ -309,6 +388,36 @@ p{
     }
     100% {
         transform: translateY(-80%);
+    }
+}
+
+@keyframes role-change2 {
+    0%, 10% {
+        transform: translateY(0%);
+    }
+    18% {
+        transform: translateY(-100%);
+    }
+    25%, 35% {
+        transform: translateY(-100%);
+    }
+    43% {
+        transform: translateY(-200%);
+    }
+    50%, 60% {
+        transform: translateY(-200%);
+    }
+    68% {
+        transform: translateY(-300%);
+    }
+    75%, 85% {
+        transform: translateY(-300%);
+    }
+    93% {
+        transform: translateY(-400%);
+    }
+    100% {
+        transform: translateY(-400%);
     }
 }
 
@@ -359,15 +468,19 @@ p{
     padding-left: 3%;
 }
 
+.roles-container{
+    width: 150px;
+}
+
 .tit1 {
     font-size: 32px;
     margin-bottom: 10px;
 }
 
 .tit2, .roles-container, .tit2-container{
-    max-width: 350px;
+    display: flex;
     font-size: 23px;
-    flex-direction: column;
+    flex-direction: row;
 }
 }
 
@@ -377,7 +490,7 @@ p{
 }
 
 .tit2-container{
-    flex-direction: column;
+    flex-direction: row;
 }
 
 .roles-container{
@@ -411,14 +524,20 @@ p{
 
 @media(max-width: 500px){
 .tit2-container{
-    flex-direction: column;
+    flex-direction: row;
 } 
 }
 
 @media(max-width: 440px){
 .tit2-container{
-    flex-direction: column;
+    flex-direction: row;
 }
+}
+
+@media(max-width: 340px){
+    .role, .tit2{
+        font-size: 18px;
+    }
 }
 
 

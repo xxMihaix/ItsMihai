@@ -12,4 +12,18 @@ document.addEventListener('DOMContentLoaded', () => {
             menuCont.classList.remove('active');
         }
     })
+
+    const anim = document.querySelector('.roles');
+
+    const text = document.querySelector('.tit2');
+    const width = window.innerWidth;
+
+    if(width > 720){
+        anim.classList.add('animation1')
+    }
+    
+    if(width <= 720){
+        text.textContent = 'Welcome to our';
+        anim.classList.add('animation2')
+    }
 })
