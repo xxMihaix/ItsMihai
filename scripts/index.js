@@ -28,6 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     merch()
+    carousel()
 })
 
 function merch(){
@@ -85,17 +86,39 @@ function merch(){
 
 
 function carousel(){
-    const list = ["UxS4NPe0Vqw", "r9t3SBduqek", "irql8VkBeKo", "rNLEgs0khqM", "0ugtYM2v37w", "j5RGbx37EQQ", "YWnwXBcB6uE", "CdXpPlXpWOk", "UxS4NPe0Vqw", "r9t3SBduqek", "irql8VkBeKo", "rNLEgs0khqM", "0ugtYM2v37w", "j5RGbx37EQQ", "YWnwXBcB6uE", "CdXpPlXpWOk"]; 
+    const list = [
+        { url: 'UxS4NPe0Vqw', image: '1'},
+        { url: 'r9t3SBduqek', image: '2'},
+        { url: 'irql8VkBeKo', image: '3'},
+        { url: 'rNLEgs0khqM', image: '4'},
+        { url: '0ugtYM2v37w', image: '5'},
+        { url: 'j5RGbx37EQQ', image: '6'},
+        { url: 'YWnwXBcB6uE', image: '7'},
+        { url: 'CdXpPlXpWOk', image: '8'},
+        { url: 'UxS4NPe0Vqw', image: '1'},
+        { url: 'r9t3SBduqek', image: '2'},
+        { url: 'irql8VkBeKo', image: '3'},
+        { url: 'rNLEgs0khqM', image: '4'},
+        { url: '0ugtYM2v37w', image: '5'},
+        { url: 'j5RGbx37EQQ', image: '6'},
+        { url: 'YWnwXBcB6uE', image: '7'},
+        { url: 'CdXpPlXpWOk', image: '8'},     
+    ]; 
 
     const container = document.querySelector('.carousel-track');
-    //container.innerHTML = '';
+    container.innerHTML = '';
 
-    list.forEach(el => {
-        const item = `  <div class="video-card" data-id="${el}">
-                            <img src="https://img.youtube.com/vi/${el}/hqdefault.jpg" alt="Video thumbnail" loading="lazy">
-                            <button class="play-btn" aria-label="Play video">▶</button>
-                        </div>`
-        //container.innerHTML += item;
+    list.forEach((el, index) => {
+        const item = `
+                    <a href="https://www.youtube.com/shorts/${el.url}" target="_blank" class="video-card">
+                        <img src="/images/Thumbnails/${el.image}.png">
+                        <div class="yt-shorts">
+                            <img src="/images/socialLogo/YoutubeShorts.webp">
+                        </div>
+                    </a>`
+        container.innerHTML += item;
     })
+
+    container.style.animation = 'scroll-videos 19s linear infinite';
 }
 
