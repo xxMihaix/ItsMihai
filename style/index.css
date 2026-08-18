@@ -1813,7 +1813,7 @@ p{
     border-radius: 20px;
     box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08), 
                 0 8px 10px -6px rgba(0, 0, 0, 0.04);
-    background-color: #dfdfdfa6;     
+    background-color: #d2d1d1a6;     
 }
 
 @media(max-width: 885px){
@@ -1941,6 +1941,10 @@ p{
     height: 50px;
 }
 
+.cont-all a{
+    text-decoration: none;
+}
+
 .flex{
     display: flex;
     justify-content: start;
@@ -1991,13 +1995,111 @@ p{
 }
 
 
+/************** Fan Art **************/
+
+.fanart-container-all{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.fanart-title{
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 25px;
+}
+
+.fanart-container{
+    padding: 15px;
+    max-width: 1400px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.fanart-description{
+    background-color: #e1dede;
+    border-radius: 16px;
+    padding: 12px;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08), 
+                0 8px 10px -6px rgba(0, 0, 0, 0.04);
+    margin-bottom: 20px;
+}
 
 
+.fanart-cont{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: minmax(150px, auto);
+    gap: 1rem;
+}
+
+@media(max-width: 1000px){
+    .fanart-cont{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media(max-width: 500px){
+    .fanart-cont{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width: 380px){
+    .fanart-cont{
+        gap: 0.3rem;
+    }
+    .fanart-container{
+        padding: 5px;
+    }
+}
 
 
+.fanart-item{
+    position: relative;
+    border: 2px solid;
+    aspect-ratio: 1/1;
+    width: 100%;
+    transition: 0.3s;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.04), 
+                0 8px 10px -6px rgba(0, 0, 0, 0.04);
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 20px;
+}
 
+.fanart-item:hover{
+    transform: scale(1.015);
+}
 
+.fanart-img{
+    width: 100%;
+    height: 100%;
+}
 
+.madeby{
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    font-size: 15px;
+    color:#ff2a85;
+    font-weight: bold;
+    text-align: end;
+}
+
+@media(max-width: 650px){
+    .madeby{
+        font-size: 12px;
+    }
+}
 
 
 

@@ -29,6 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     merch()
     carousel()
+    renderArts()
 })
 
 function merch(){
@@ -41,7 +42,7 @@ function merch(){
 
     const display = document.querySelector('.img-merch');
     display.src = list[index];
-    console.log(index);
+    //console.log(index);
 
     arrowLeft.addEventListener('click', () => {
         index -= 1;
@@ -123,4 +124,25 @@ function carousel(){
 }
 
 
+function renderArts(){
 
+    const list = [ "aidanator234", "angelmateo23_74704", "mihai_star", "lordofdarkness_32178", "smellyllama9813._82638", "kubb111", "angelmateo23_74704", "jaycegabriel"];
+
+    const container = document.querySelector('.fanart-cont');
+    container.innerHTML = ' ';
+
+    let index = 0;
+
+    for(index = 1; index <= 8; index++){
+        //console.log(index);
+
+        const el = `
+                    <a target="_blank" href="/images/fanArt/${index}.png">
+                        <div class="fanart-item">
+                            <img class="fanart-img" src="/images/fanArt/${index}.png">
+                            <p class="madeby">Made by: ${list[index]}</p>
+                        </div>
+                    </a>`
+        container.innerHTML += el;
+    }
+}
