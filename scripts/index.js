@@ -140,7 +140,7 @@ function renderArts(){
                     <a target="_blank" href="/images/fanArt/${index}.png">
                         <div class="fanart-item">
                             <img class="fanart-img" src="/images/fanArt/${index}.png">
-                            <p class="madeby">Made by: ${list[index]}</p>
+                            <p class="madeby">Made by: ${list[index - 1]}</p>
                         </div>
                     </a>`
         container.innerHTML += el;
