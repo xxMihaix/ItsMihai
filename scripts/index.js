@@ -126,7 +126,7 @@ function carousel(){
 
 function renderArts(){
 
-    const list = [ "aidanator234", "angelmateo23_74704", "mihai_star", "lordofdarkness_32178", "smellyllama9813._82638", "kubb111", "angelmateo23_74704", "jaycegabriel"];
+    const list = [ "aidanator234", "angelmateo23_74704", "angelmateo23_74704", "lordofdarkness_32178", "mihai_star", "smellyllama9813._82638", "kubb111", "jaycegabriel"];
 
     const container = document.querySelector('.fanart-cont');
     container.innerHTML = ' ';
